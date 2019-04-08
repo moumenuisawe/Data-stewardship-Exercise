@@ -18,9 +18,11 @@ UnEmployee["DATE"] =  pd.to_datetime(UnEmployee['DATE'], format= "%d/%m/%Y")
 UnEmployee["DATE"] = UnEmployee["DATE"].dt.year
 #  end of converting date section
 
-
-
-
-
 AverageUnEmployeeRate = df.calculateTheAverageOfUnEmployeeRate(UnEmployee)
+AverageMoviesRatePerYear = df.calculateTheAverageOfMovieScoreByYear(Movies)
+
+# print(AverageMoviesRatePerYear["year"])
+# print(AverageMoviesRatePerYear["score"])
+
+df.compareAndTransferData(AverageUnEmployeeRate,AverageMoviesRatePerYear)
 
