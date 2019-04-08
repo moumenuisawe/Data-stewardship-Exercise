@@ -22,3 +22,13 @@ def calculateTheAverageOfUnEmployeeRate(pureListToCalculateTheAverage):
 
         sumation += pureListToCalculateTheAverage["RATE"][counter]
     return  listToReturn
+
+
+def calculateTheAverageOfMovieScoreByYear(MovieDataSet):
+    listToReturn = []
+    sumation = 0
+    base= MovieDataSet["year"][0]
+    pointer = 0
+
+
+
