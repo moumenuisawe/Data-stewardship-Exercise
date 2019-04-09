@@ -35,22 +35,27 @@ def calculateTheAverageOfMovieScoreByYear(MovieDataSet):
         counter = 0
         summetion = 0
         base = MovieDataSet["year"][0]
-        year = []
+        print(base)
+        year = [base]
         index = 0
         for item in MovieDataSet["year"]:
+            print(base)
 
             if item == None:
                 break
 
-            if item != base:
+            if base != item:
                 base = item
-                year.append(item)
+                print(base)
+                year.append(base)
                 score.append(summetion/counter)
                 counter = 0
                 summetion = 0
             counter +=1
+            index +=1
             summetion += MovieDataSet["score"][index]
-        return  {"year":year,"score":score}
+            print(score)
+            return  {"year":year,"score":score}
 
 
 
@@ -97,7 +102,8 @@ def removeFromList(data,firstColoum,secandColoum, maxmum,minimum):
                 index = data[firstColoum].index(item)
                 data[firstColoum].remove(item)
                 data[secandColoum].pop(index)
-                print(item)
+
+
 # def createOneDictionaryfromTwo(firstDictionary,secondeDictionary):
 
 def createFinalDictionary(firstDictionary,secDictionary):
