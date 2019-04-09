@@ -20,9 +20,9 @@ UnEmployee["DATE"] = UnEmployee["DATE"].dt.year
 
 AverageUnEmployeeRate = df.calculateTheAverageOfUnEmployeeRate(UnEmployee)
 AverageMoviesRatePerYear = df.calculateTheAverageOfMovieScoreByYear(Movies)
+df.cutUnwantedData(AverageUnEmployeeRate,AverageMoviesRatePerYear)
 
-# print(AverageMoviesRatePerYear["year"])
-# print(AverageMoviesRatePerYear["score"])
-
-df.compareAndTransferData(AverageUnEmployeeRate,AverageMoviesRatePerYear)
-
+print(len(AverageMoviesRatePerYear["year"]))
+print(len(AverageMoviesRatePerYear["score"]))
+print(len(AverageUnEmployeeRate["year"]))
+print(len(AverageUnEmployeeRate["rate"]))

@@ -55,13 +55,45 @@ def calculateTheAverageOfMovieScoreByYear(MovieDataSet):
     listToReturn["score"] = scores
     return listToReturn
 
-def compareAndTransferData(firstData, secondeData):
+def getMinimumYearToBegin(firstData, secondeData):
     firstDataYearMinmimam = min(firstData["year"])
-    firstDataYearMaxmum = max(firstData["year"])
     secondeDataYearMinmimam = min(secondeData["year"])
+    return max(firstDataYearMinmimam,secondeDataYearMinmimam)
+def getMaxmeumYearToBegin(firstData, secondeData):
+    firstDataYearMaxmum = max(firstData["year"])
     secondeDataYearMaxmum = max(secondeData["year"])
-    minValueToCut = max(firstDataYearMinmimam,secondeDataYearMinmimam)
-    maxValueToCut = min(firstDataYearMaxmum,secondeDataYearMaxmum)
-    print("min =",minValueToCut)
-    print("max =",maxValueToCut)
+    return min(firstDataYearMaxmum,secondeDataYearMaxmum)
 
+
+
+def cutUnwantedData(firstData,secondeData):
+
+
+    minim = getMinimumYearToBegin(firstData, secondeData)
+    maximum = getMaxmeumYearToBegin(firstData, secondeData)
+    removeFromList(secondeData, "year", "score", maximum, minim)
+    removeFromList(firstData, "year", "rate", maximum, minim)
+
+
+
+def removeFromList(data,firstColoum,secandColoum, maxmum,minimum):
+
+        index = 0
+        while data[firstColoum][index] < minimum :
+            data[firstColoum].pop(0)
+            print(data[secandColoum].pop(0))
+
+
+
+
+        for item in data[firstColoum]:
+            if item > maxmum     :
+                index = data[firstColoum].index(item)
+                data[firstColoum].remove(item)
+                data[secandColoum].pop(index)
+
+            if item < minimum :
+                index = data[firstColoum].index(item)
+                data[firstColoum].remove(item)
+                data[secandColoum].pop(index)
+                print(item)
