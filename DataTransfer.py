@@ -1,3 +1,5 @@
+import  csv
+
 def cleanData(data):
     if (data.isnull().sum()):
         dataMedian = data.median()
@@ -97,3 +99,30 @@ def removeFromList(data,firstColoum,secandColoum, maxmum,minimum):
                 data[secandColoum].pop(index)
                 print(item)
 # def createOneDictionaryfromTwo(firstDictionary,secondeDictionary):
+
+def createFinalDictionary(firstDictionary,secDictionary):
+    finalDictionary = {}
+    finalDictionary["year"]  = firstDictionary["year"]
+    finalDictionary["UnEmployeeRate"] = secDictionary["rate"]
+    finalDictionary["movieScore"] = firstDictionary["score"]
+    return  finalDictionary
+
+
+def csvWriterFromDict(dictionray,filePath):
+    csv_columns = ['year', 'UnEmployeeRate', 'movieScore']
+    dict_data = dictionray
+    csv_file = filePath
+    index = 0
+    try:
+        with open(csv_file, 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+            writer.writeheader()
+            while index < len(dict_data["year"]):
+                year = str(dict_data["year"][index])
+                unEmployeeRate = str(dict_data["UnEmployeeRate"][index])
+                movieScore = str(dict_data["movieScore"][index])
+
+                csvfile.write(year+","+unEmployeeRate+","+movieScore+"\n")
+                index +=1
+    except IOError:
+        print("I/O error")

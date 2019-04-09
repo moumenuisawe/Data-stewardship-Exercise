@@ -27,4 +27,6 @@ averageMoviesRatePerYear["year"].pop(0)
 averageMoviesRatePerYear["score"].pop(0)
 
 
+csvData = df.createFinalDictionary(averageMoviesRatePerYear,averageUnEmployeeRate)
 
+df.csvWriterFromDict(csvData,"Data/processed/result.csv")
