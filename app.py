@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+
 import pandas as pd
 import DataTransfer as df
 import csv
@@ -20,18 +21,12 @@ UnEmployee["DATE"] =  pd.to_datetime(UnEmployee['DATE'], format= "%d/%m/%Y")
 UnEmployee["DATE"] = UnEmployee["DATE"].dt.year
 #  end of converting date section
 
-
-
-
-
-
-
 averageUnEmployeeRate = df.calculateTheAverageOfUnEmployeeRate(UnEmployee)
 averageMoviesRatePerYear = df.calculateTheAverageOfMovieScoreByYear(Movies)
 df.cutUnwantedData(averageUnEmployeeRate,averageMoviesRatePerYear)
 #
-# averageMoviesRatePerYear["year"].pop(0)
-# averageMoviesRatePerYear["score"].pop(0)
+averageMoviesRatePerYear["year"].pop(0)
+averageMoviesRatePerYear["score"].pop(0)
 
 
 csvData = df.createFinalDictionary(averageMoviesRatePerYear,averageUnEmployeeRate)
@@ -39,13 +34,11 @@ csvData = df.createFinalDictionary(averageMoviesRatePerYear,averageUnEmployeeRat
 df.csvWriterFromDict(csvData,"Data/processed/result.csv")
 
 
-# read processed csv to get information
-result = pd.read_csv("Data/processed/result.csv", usecols=["year","UnEmployeeRate","movieScore"])
+# read result
+result = pd.read_csv("Data/Processed/result.csv",usecols=["year","UnEmployeeRate","movieScore"])
+# draw chart
+plt.plot(result["year"],result["movieScore"], label = "Movie Score")
+plt.plot(result["year"],result["UnEmployeeRate"], label = "UnEmployee  Rate")
 
-plt.plot(result["year"],result["UnEmployeeRate"],label="UnEmployed Rate")
-# plt.plot(result["year"],result["movieScore"],label="Movie Score")
-plt.xlabel('Year')
-
-plt.legend(loc='upper left')
-
+plt.legend()
 plt.show()
