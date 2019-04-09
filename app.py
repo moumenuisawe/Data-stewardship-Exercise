@@ -1,5 +1,6 @@
 import pandas as pd
 import DataTransfer as df
+import csv
 
 # read files
 Movies = pd.read_csv("Data/Row/movies.csv",usecols=["year","score"])
@@ -18,11 +19,12 @@ UnEmployee["DATE"] =  pd.to_datetime(UnEmployee['DATE'], format= "%d/%m/%Y")
 UnEmployee["DATE"] = UnEmployee["DATE"].dt.year
 #  end of converting date section
 
-AverageUnEmployeeRate = df.calculateTheAverageOfUnEmployeeRate(UnEmployee)
-AverageMoviesRatePerYear = df.calculateTheAverageOfMovieScoreByYear(Movies)
-df.cutUnwantedData(AverageUnEmployeeRate,AverageMoviesRatePerYear)
+averageUnEmployeeRate = df.calculateTheAverageOfUnEmployeeRate(UnEmployee)
+averageMoviesRatePerYear = df.calculateTheAverageOfMovieScoreByYear(Movies)
+df.cutUnwantedData(averageUnEmployeeRate,averageMoviesRatePerYear)
+#
+averageMoviesRatePerYear["year"].pop(0)
+averageMoviesRatePerYear["score"].pop(0)
 
-print(len(AverageMoviesRatePerYear["year"]))
-print(len(AverageMoviesRatePerYear["score"]))
-print(len(AverageUnEmployeeRate["year"]))
-print(len(AverageUnEmployeeRate["rate"]))
+
+

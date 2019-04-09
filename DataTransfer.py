@@ -27,33 +27,32 @@ def calculateTheAverageOfUnEmployeeRate(pureListToCalculateTheAverage):
     return  {"year":year , "rate":averageRate}
 
 
+
 def calculateTheAverageOfMovieScoreByYear(MovieDataSet):
-    scores = []
+        score = []
+        counter = 0
+        summetion = 0
+        base = MovieDataSet["year"][0]
+        year = []
+        index = 0
+        for item in MovieDataSet["year"]:
 
-    base = MovieDataSet["year"][0]
+            if item == None:
+                break
 
-    year =[base]
-    pointer = 0
-    counter = 0
-    listToReturn = {}
-    summation = 0
-    for item in MovieDataSet["year"]:
-       if item == None :
-           break
-       if base != MovieDataSet["year"][pointer]:
-           base =  MovieDataSet["year"][pointer]
-           scores.append(summation/counter)
-           summation = 0
-           counter = 0
-           year.append(base)
+            if item != base:
+                base = item
+                year.append(item)
+                score.append(summetion/counter)
+                counter = 0
+                summetion = 0
+            counter +=1
+            summetion += MovieDataSet["score"][index]
+        return  {"year":year,"score":score}
 
-       summation += MovieDataSet["score"][pointer]
-       pointer +=1
-       counter +=1
-    scores.append(summation/counter)
-    listToReturn["year"] = year
-    listToReturn["score"] = scores
-    return listToReturn
+
+
+
 
 def getMinimumYearToBegin(firstData, secondeData):
     firstDataYearMinmimam = min(firstData["year"])
@@ -80,8 +79,8 @@ def removeFromList(data,firstColoum,secandColoum, maxmum,minimum):
 
         index = 0
         while data[firstColoum][index] < minimum :
-            data[firstColoum].pop(0)
-            print(data[secandColoum].pop(0))
+                data[firstColoum].pop(0)
+                data[secandColoum].pop(0)
 
 
 
@@ -92,8 +91,9 @@ def removeFromList(data,firstColoum,secandColoum, maxmum,minimum):
                 data[firstColoum].remove(item)
                 data[secandColoum].pop(index)
 
-            if item < minimum :
+            if item <= minimum :
                 index = data[firstColoum].index(item)
                 data[firstColoum].remove(item)
                 data[secandColoum].pop(index)
                 print(item)
+# def createOneDictionaryfromTwo(firstDictionary,secondeDictionary):
