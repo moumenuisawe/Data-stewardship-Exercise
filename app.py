@@ -3,8 +3,8 @@ import pandas as pd
 import DataTransfer as df
 
 # read files
-Movies = pd.read_csv("Data/Row/movies.csv",usecols=["year","score"])
-UnEmployee = pd.read_csv("Data/Row/unemployee.csv",usecols=["DATE","RATE"],parse_dates=True)
+Movies = pd.read_csv("Data/Raw/movies.csv",usecols=["year","score"])
+UnEmployee = pd.read_csv("Data/Raw/unemployee.csv",usecols=["DATE","RATE"],parse_dates=True)
 #  end of read files section
 
 
