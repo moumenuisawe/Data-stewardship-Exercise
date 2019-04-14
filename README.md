@@ -14,7 +14,7 @@ The cited data sources have already been added to this repository.
 
 
 ## This Project  works on this structure
-![System Architecture Diagram](https://raw.githubusercontent.com/mdietrichstein/digitalpreservation-dmp/a117d99b00ec7def31bff4b79f9f6933badecce2/documentation/architecture.png "System Architecture Diagram")
+![System Architecture Diagram](https://github.com/moumenuisawe/Data-stewardship-Exercise/blob/master/decumentation/architecture.png "System Architecture Diagram")
 
 
 
