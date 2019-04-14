@@ -31,16 +31,3 @@ script from Explorer onto the Command Line window and press enter.
 
 then you can visualize the date running Exercise/DataVisualization.py
 the result will gonna be in reports file
-### Docker
-
-Run `docker build .` to create a docker image of this repository. The resulting image exposes the jupyter notebook on port `8888`.
-
-Boot a docker container via `docker run -i -p 8888:8888 <IMAGE_ID>` to start a jupyter instance. The resulting console output will show the url you can open in your browser to take a look at the code, e.g.
-
-```
- Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://0.0.0.0:8888/?token=<SOME_TOKEN>
-```
-
-
