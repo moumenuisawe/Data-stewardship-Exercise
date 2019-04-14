@@ -25,7 +25,7 @@ The cited data sources have already been added to this repository.
 To run the code in this repository you will need to have access to a machine running `python` 
 you should clean data before you start visualize it 
 * Open Command line:   Start menu -> Run  and type cmd
-* Type:   C:\python27\python.exe Exercise\app.py
+* Type:   C:\python37\python.exe                              Exercise\app.py
 * Or if your system is configured correctly, you can drag and drop your 
 script from Explorer onto the Command Line window and press enter.
 
