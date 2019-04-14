@@ -7,7 +7,7 @@
 ## Data Sources
 
 * Unemployed Rate. [Data set]. https://fred.stlouisfed.org/series/LNS14000024
-* /wikipedia-movie-plots ,  https://www.kaggle.com/jrobischon/wikipedia-movie-plots
+* wikipedia movie plots ,  https://www.kaggle.com/jrobischon/wikipedia-movie-plots
 
 The cited data sources have already been added to this repository. 
 
