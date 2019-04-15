@@ -4,5 +4,5 @@ WORKDIR /app
 
 RUN pip install pystrich
 
-CMD [ "python" ]
+CMD [ "python","--allow-root", "--no-browser" ]
 
