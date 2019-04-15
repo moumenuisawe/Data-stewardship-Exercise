@@ -1,4 +1,6 @@
 import  csv
+import pandas as pd
+
 
 def cleanData(data):
     if (data.isnull().sum()):
@@ -124,3 +126,41 @@ def csvWriterFromDict(dictionray,filePath):
                 index +=1
     except IOError:
         print("I/O error")
+
+
+
+
+
+
+
+
+# read files
+Movies = pd.read_csv("Data/Raw/movies.csv",usecols=["year","score"])
+UnEmployee = pd.read_csv("Data/Raw/unemployee.csv",usecols=["DATE","RATE"],parse_dates=True)
+#  end of read files section
+
+
+#  clean data to ensure that there is no null value  in it
+cleanData(Movies["score"])
+cleanData(Movies["year"])
+cleanData(UnEmployee["DATE"])
+cleanData(UnEmployee["RATE"])
+
+#  convert date to get just year
+UnEmployee["DATE"] =  pd.to_datetime(UnEmployee['DATE'], format= "%d/%m/%Y")
+UnEmployee["DATE"] = UnEmployee["DATE"].dt.year
+#  end of converting date section
+
+averageUnEmployeeRate = calculateTheAverageOfUnEmployeeRate(UnEmployee)
+averageMoviesRatePerYear = calculateTheAverageOfMovieScoreByYear(Movies)
+cutUnwantedData(averageUnEmployeeRate,averageMoviesRatePerYear)
+#
+averageMoviesRatePerYear["year"].pop(0)
+averageMoviesRatePerYear["score"].pop(0)
+
+
+csvData = createFinalDictionary(averageMoviesRatePerYear,averageUnEmployeeRate)
+
+csvWriterFromDict(csvData,"Data/processed/result.csv")
+
+
