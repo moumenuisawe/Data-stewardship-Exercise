@@ -1,4 +1,7 @@
- 
+ ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg)
+
+
+
 # Correlating Movies score and Unemployed rate
 
   This experiment aims to explore the connection between Movies score and Unemployed rate in the USA.
@@ -33,4 +36,11 @@ script from Explorer onto the Command Line window and press enter.
 then you can visualize the date running Exercise/DataVisualization.py
 the result will gonna be in reports file
 #result 
+
 the DOI of result is 10.5281/zenodo.2639831
+
+
+
+
+# license
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
