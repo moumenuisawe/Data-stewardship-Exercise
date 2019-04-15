@@ -1,7 +1,6 @@
-<span class="get-badge" data-toggle="toolt  ip" data-placement="bottom" title="Get the DOI badge!">
-        <img data-toggle="modal" data-target="[data-modal='10.5281/zenodo.2639864']" src="/badge/DOI/10.5281/zenodo.2639864.svg" alt="10.5281/zenodo.2639869">
+
         
-      </span>
+https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg
 
 # Correlating Movies score and Unemployed rate
 
