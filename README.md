@@ -1,4 +1,4 @@
-Format: ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg)
+ ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg)
 
 
 
