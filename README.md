@@ -1,4 +1,4 @@
- 
+DOI =  10.5281/zenodo.2639864 
 # Correlating Movies score and Unemployed rate
 
   This experiment aims to explore the connection between Movies score and Unemployed rate in the USA.
@@ -33,7 +33,10 @@ script from Explorer onto the Command Line window and press enter.
 then you can visualize the date running Exercise/DataVisualization.py
 the result will gonna be in reports file
 #result 
+
 the DOI of result is 10.5281/zenodo.2639831
+
+
 
 
 # license
