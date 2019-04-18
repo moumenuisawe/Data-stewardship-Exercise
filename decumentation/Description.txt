@@ -1,2 +1,5 @@
+Data used in this project are from Wikipidia and Economic research website.
+
+
 The X-Axis describes the timeline for which the data was analyzed.
 The Y-Axis describes both the Movies score and the UnEmployed Rate.
