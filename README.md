@@ -51,10 +51,11 @@ After your image has been built successfully, you can run it as a container. In 
 
 
 
-#Digital Object Identifier (DOI).
-DOI for source code  ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg)
-DOI of data result   ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639831.svg)
-DOI For the DMP [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2648286.svg)](https://doi.org/10.5281/zenodo.2648286)
+# Digital Object Identifier (DOI).
+DOI for source code  ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg).
+
+DOI of data result   ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639831.svg).
+DOI For the DMP [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2648286.svg)](https://doi.org/10.5281/zenodo.2648286).
 
 
 
