@@ -37,7 +37,7 @@ then you can visualize the date running Exercise/DataVisualization.py
 the result will gonna be in reports file
 #result 
 
-the DOI of result is 10.5281/zenodo.2639831
+the DOI of result is  ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639831.svg)
 
 ## Docker
 follow this instruction if you wish to run the code using docker 
