@@ -55,7 +55,9 @@ After your image has been built successfully, you can run it as a container. In 
 DOI for **source code**  ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639864.svg).<br/>
 
 DOI of **data result**   ![Alt Text](https://zenodo.org/badge/DOI/10.5281/zenodo.2639831.svg).<br/>
-DOI For the **DMP** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2648286.svg)](https://doi.org/10.5281/zenodo.2648286).<br/>
+DOI For the **DMPOnline** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2648286.svg)](https://doi.org/10.5281/zenodo.2648286).<br/>
+DOI for DMP created using DS-Wizard [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2648404.svg)](https://doi.org/10.5281/zenodo.2648404)
+<br/>
 
 
 
