@@ -39,7 +39,17 @@ the result will gonna be in reports file
 
 the DOI of result is 10.5281/zenodo.2639831
 
+##Docker
+follow this instruction if you wish to run the code using docker 
 
+first of all 
+> run cmd/terminal  according to your os.
+
+then type
+ > docker build -t myImage.
+
+After your image has been built successfully, you can run it as a container. In your terminal, run the command docker images to view your images. You should see an entry for **myImage**. Run the new image by entering:
+>docker run  myImage
 
 
 # license
