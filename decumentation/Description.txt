@@ -1,5 +1,6 @@
-Data used in this project are from Wikipidia and Economic research website.
+Data collected in this project was from a dataset about the unemployment rate in the United States, also the average score of movies per year.
 
+There are many pre-collect data, such as Wikipedia and other IMDB datasets saved as CSV format, texts, Dates format. Which allows the date to be preserved for a long-term.
 
-The X-Axis describes the timeline for which the data was analyzed.
-The Y-Axis describes both the Movies score and the UnEmployed Rate.
+Data used in this project are from Wikipidia and Economic research website, date size were less than 1 MB. 
+
